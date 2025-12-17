@@ -1,0 +1,479 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Fonts - Add to your HTML head:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+*/
+
+:root {
+  --bg: #030417;
+  --card: #0b1220;
+  --primary: #0015ff;
+  --accent: #00c8ff;
+  --gradient: linear-gradient(90deg, #0015ff, #00c8ff, #ffffff);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: #ffffff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0f2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0015ff, #00c8ff);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00c8ff, #0015ff);
+}
+
+/* ============================================
+   SELECTION STYLES
+   ============================================ */
+
+::selection {
+  background: rgba(0, 200, 255, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(0, 200, 255, 0.3);
+  color: #ffffff;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.font-display {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #0015ff, #00c8ff, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow Effects */
+.glow {
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.3);
+}
+
+.glow-strong {
+  box-shadow: 0 0 50px rgba(0, 200, 255, 0.5);
+}
+
+.shadow-glow {
+  box-shadow: 0 12px 40px rgba(0, 21, 255, 0.2);
+}
+
+/* Button Styles */
+.hire-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #0015ff, #00c8ff);
+  color: white;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(0, 200, 255, 0.3);
+}
+
+.hire-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 200, 255, 0.5);
+}
+
+.outline-btn {
+  padding: 1rem 2rem;
+  border: 2px solid rgba(0, 200, 255, 0.5);
+  color: #00c8ff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.outline-btn:hover {
+  background: rgba(0, 200, 255, 0.1);
+  border-color: #00c8ff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 200, 255, 0.6);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* ============================================
+   PROJECT SECTION STYLES
+   ============================================ */
+
+.projects-row {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.projects-row.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-frame-outer {
+  transform: translate(36px, 36px);
+  box-shadow: 0 40px 100px rgba(0, 200, 255, 0.15);
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.5s;
+  z-index: 1;
+}
+
+.project-frame-inner {
+  transform: translate(18px, 18px);
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.5s;
+  z-index: 2;
+}
+
+.project-inner-card {
+  transform: translate(12px, 12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.5s;
+  z-index: 3;
+}
+
+.project-image-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.5s;
+  z-index: 20;
+}
+
+.project-visual:hover .project-image-card {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.project-visual:hover .project-frame-outer {
+  transform: translate(20px, 20px) scale(1.01);
+}
+
+.project-visual:hover .project-frame-inner {
+  transform: translate(12px, 12px) scale(1.01);
+}
+
+/* ============================================
+   ABOUT SECTION STYLES
+   ============================================ */
+
+.about-frame-outer {
+  transform: translate(-48px, -48px);
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.2, 1);
+  z-index: 1;
+}
+
+.about-image-card {
+  position: relative;
+  z-index: 10;
+  transition: transform 0.5s ease;
+}
+
+.about-image-card:hover {
+  transform: scale(1.03);
+}
+
+/* ============================================
+   INPUT & FORM STYLES
+   ============================================ */
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(0, 200, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(156, 163, 175, 0.6);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .project-frame-outer {
+    border-width: 10px;
+    transform: translate(20px, 20px);
+  }
+  
+  .project-frame-inner {
+    border-width: 5px;
+    transform: translate(12px, 12px);
+  }
+  
+  .project-inner-card {
+    transform: translate(6px, 6px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .project-frame-outer {
+    transform: translate(12px, 12px);
+  }
+  
+  .project-frame-inner {
+    transform: translate(8px, 8px);
+  }
+  
+  .project-inner-card {
+    transform: translate(4px, 4px);
+  }
+}
+
+/* ============================================
+   LOADING & TRANSITIONS
+   ============================================ */
+
+.page-transition {
+  animation: fadeIn 0.5s ease;
+}
+
+.section-enter {
+  animation: fadeInUp 0.8s ease;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus Styles */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #00c8ff;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
