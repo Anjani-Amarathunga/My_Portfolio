@@ -1,37 +1,40 @@
+import picture1 from '../assets/images/A1.jpeg';
+import picture2 from '../assets/images/A2.jpeg';
+import picture3 from '../assets/images/A3.jpeg';
 import React, { useEffect, useRef, useState } from 'react';
 
 const projectsData = [
   {
     id: 1,
     label: 'PROJECT 1',
-    title: 'Modelling Mobile App Design',
+    title: 'Resource Person & Payment Management System',
     description:
-      "A fashion-forward design system with bold imagery and expressive typography, creating an immersive shopping experience.",
+      "A centralized web and mobile application for DTET to manage resource persons, assign paper setters, securely upload documents, and automate payments. Contributed to the mobile app with secure uploads, user authentication, and real-time notifications.",
     image:
-      'https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80',
-    tags: ['UI/UX', 'Mobile', 'Fashion'],
+      picture1,
+    tags: ['UI/UX', 'Mobile App', 'Flutter'],
     cardBg: 'linear-gradient(135deg,#ffe6f0,#ff9ecf)'
   },
   {
     id: 2,
     label: 'PROJECT 2',
-    title: 'E-Commerce Mobile App Design',
+    title: 'Personal Portfolio Website',
     description:
-      "A clean commerce interface with product-focused screens and clear CTAs for conversion, optimized for seamless shopping.",
+      "A personal portfolio website designed to showcase my projects, technical skills, and creative work. Built with a clean and modern UI, the portfolio highlights project details, responsive layouts, and an engaging user experience to present my profile professionally.",
     image:
-      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80',
-    tags: ['E-Commerce', 'React', 'Design'],
+      picture2,
+    tags: ['Portfolio', 'Frontend', 'UI/UX'],
     cardBg: 'linear-gradient(135deg,#e6f4ff,#9ed8ff)'
   },
   {
     id: 3,
     label: 'PROJECT 3',
-    title: 'Fitness Mobile App Design',
+    title: 'SportsVision Mobile Application',
     description:
-      "A motivating fitness dashboard with progress cards, quick actions and friendly colours to keep users engaged.",
+      "A React Native mobile app delivering real-time sports data via TheSportsDB API, featuring secure authentication, Redux state management, smooth navigation, and dark mode support.",
     image:
-      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Fitness', 'Mobile', 'Health'],
+      picture3,
+    tags: ['React Native', 'API', 'Redux', 'Mobile App'],
     cardBg: 'linear-gradient(135deg,#dfe6ff,#b0c8ff)'
   }
 ];
@@ -145,7 +148,7 @@ export default function Projects() {
                 {/* CTA Button */}
                 <div style={{ animation: 'fadeInUp 0.8s ease-out 0.6s both' }}>
                   <a 
-                    href="#" 
+                    href="https://github.com/Anjani-Amarathunga?tab=repositories" 
                     className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 relative overflow-hidden"
                   >
                     <span className="relative z-10">View Project</span>
@@ -278,7 +281,7 @@ export default function Projects() {
         {/* View All Projects CTA */}
         <div className="text-center mt-20">
           <a 
-            href="#"
+            href="https://github.com/Anjani-Amarathunga"
             className="group inline-flex items-center gap-2 px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-300 hover:scale-105 hover:border-cyan-400"
           >
             <span>View All Projects</span>

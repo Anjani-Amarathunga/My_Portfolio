@@ -1,4 +1,4 @@
-import profile from '../assets/images/profile.jpg';
+import profile from '../assets/images/profile2.jpg';
 import React, { useEffect, useRef, useState } from 'react';
 
 export default function About() {
@@ -140,20 +140,15 @@ export default function About() {
               style={{ animation: isVisible ? 'fadeInUp 0.8s ease-out 0.8s both' : 'none' }}
             >
               <p>
-                I'm a <span className="text-cyan-400 font-semibold">full-stack developer</span> passionate 
-                about building performant web applications with modern technologies like <span className="text-white">React</span>, 
-                <span className="text-white"> Tailwind CSS</span>, and <span className="text-white">Node.js</span>.
+                I'm an <span className="text-cyan-400 font-semibold">Information Technology</span> undergraduate with a strong interest in building practical, user-focused digital solutions. I enjoy developing web and mobile applications using technologies such as <span className="text-white">React</span>, <span className="text-white">Flutter</span>, <span className="text-white">Spring Boot</span>, and <span className="text-white">MySQL</span>, with a focus on clean architecture and real-world usability. 
               </p>
               
               <p>
-                With a keen eye for design and a love for clean code, I create meaningful digital experiences 
-                that combine beautiful interfaces with solid functionality. Every project is an opportunity 
-                to learn, innovate, and deliver solutions that make a real impact.
+                I’m passionate about problem-solving, continuous learning, and transforming ideas into functional systems that deliver value. From full-stack applications to smart system integrations, I enjoy taking on challenges that help me grow both technically and creatively.
               </p>
 
               <p>
-                When I'm not coding, you'll find me exploring new design trends, contributing to open-source 
-                projects, or experimenting with the latest web technologies to stay ahead of the curve.
+                Beyond coding, I like exploring new technologies, improving UI/UX design skills, and working on projects that push my limits and expand my understanding of modern software development.
               </p>
             </div>
 
@@ -193,7 +188,7 @@ export default function About() {
               </a>
               
               <a 
-                href="#"
+                href="https://drive.google.com/file/d/12Q0tjaJxoNueYvvAdabccYRGJzUOqj98/view?usp=drive_link"
                 className="group px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-300 hover:scale-105 hover:border-cyan-400 flex items-center gap-2"
               >
                 <span>Download Resume</span>
