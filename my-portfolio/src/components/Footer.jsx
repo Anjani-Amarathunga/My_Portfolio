@@ -57,9 +57,9 @@ export default function Footer() {
             <p className="text-sm text-gray-400 mb-6">
               Full-Stack Developer & UI/UX Designer
             </p>
-            <p className="text-xs text-gray-500 leading-relaxed max-w-xs mx-auto md:mx-0">
+            {/*<p className="text-xs text-gray-500 leading-relaxed max-w-xs mx-auto md:mx-0">
               Creating beautiful, functional digital experiences that blend creativity with cutting-edge technology.
-            </p>
+            </p>*/}
           </div>
 
           {/* Quick Links */}
