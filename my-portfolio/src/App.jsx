@@ -4,10 +4,17 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "dark"
-  );
+  const [theme, setTheme] = useState("dark");
 
+  // Load theme from localStorage safely after component mounts
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  // Update theme
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
@@ -20,11 +27,9 @@ function App() {
   return (
     <div className="bg-white dark:bg-darkBg text-gray-900 dark:text-white min-h-screen transition-colors">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-
       <main>
         <Home />
       </main>
-
       <Footer />
     </div>
   );
