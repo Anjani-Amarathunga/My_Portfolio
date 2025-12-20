@@ -188,7 +188,7 @@ export default function About() {
               </a>
               
               <a 
-                href="https://drive.google.com/file/d/1P5S3EbA4K3STW2uU5XxCE1fuVHYQpH-s/view?usp=sharing"
+                href="https://drive.google.com/file/d/1LIHDBtBK0tfF1Wd0DcOMVagHQ-EtzJjs/view?usp=sharing"
                 className="group px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-300 hover:scale-105 hover:border-cyan-400 flex items-center gap-2"
               >
                 <span>Download Resume</span>
